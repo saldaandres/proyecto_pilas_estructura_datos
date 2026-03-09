@@ -32,4 +32,8 @@ public class PilaPizzas {
         tope = tope.getSiguiente();
         return retirado.getPizza();
     }
+
+    public Pizza peek() {
+        return tope.getPizza();
+    }
 }
