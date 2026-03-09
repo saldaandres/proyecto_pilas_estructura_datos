@@ -12,15 +12,14 @@ public class PilaPizzas {
     }
 
     public void push(Pizza pizza) {
+        System.out.println("Pizza agregada ---> " + pizza.toString());
+        tamano ++;
         if (tope == null) {
             tope = new Nodo(pizza, null);
-            System.out.println("Se agrega una nueva pizza a la pila");
-            tamano ++;
             return;
         }
         Nodo segundo = tope;
         tope = new Nodo(pizza, segundo);
-        tamano ++;
     }
 
     public Pizza pop() {
@@ -30,6 +29,7 @@ public class PilaPizzas {
         }
         Nodo retirado = tope;
         tope = tope.getSiguiente();
+        tamano --;
         return retirado.getPizza();
     }
 
