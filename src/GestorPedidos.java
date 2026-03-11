@@ -21,6 +21,26 @@ public class GestorPedidos {
         pedidos.push(nuevaPizza);
     }
 
+    public void undoPedido() {
+        if (pedidos.isEmpty()) {
+            System.out.println("\nPila de pedidos se encuentra vacia");
+            return;
+        }
+        Pizza pizzaCompletada = pedidos.pop();
+        completados.push(pizzaCompletada);
+        System.out.println("\nPizza " + pizzaCompletada.toString() + " mandada a la pila de completadas.");
+    }
+
+    public void redoPedido() {
+        if (completados.isEmpty()) {
+            System.out.println("La pila de pedidos completados se encuentra vacia");
+            return;
+        }
+        Pizza pizzaPorRehacer = completados.pop();
+        pedidos.push(pizzaPorRehacer);
+        System.out.println("\nPizza " + pizzaPorRehacer.toString() + " mandada a la pila de completadas.");
+    }
+
     static void main(String[] args) {
         String nombre1 = "margarita";
         String nombre2 = "4 quesos";
