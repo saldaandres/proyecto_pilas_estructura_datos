@@ -11,6 +11,19 @@ public class GestorPedidos {
         completados = new PilaPizzas();
     }
 
+    public int mostrarMenu() {
+        System.out.println("\n|---------- Bienvenido al Portal de Pizzas ------------- |");
+        System.out.println("|        Digite una de las siguientes opciones           |");
+        System.out.println("|        1. Agregar nueva pizza                         |");
+        System.out.println("|        2. Completar pedido                             |");
+        System.out.println("|        3. Rehacer pedido                               |");
+        System.out.println("|        3. Mostrar pedido actual                        |");
+        System.out.println("|        0. Salir                                        |");
+        System.out.println("|------------------------------------------------------- |");
+        System.out.print("\nDigite su eleccion: ");
+        return this.scanner.nextInt();
+    }
+
     public void registrarPizza() {
         System.out.print("Digite el nombre de la pizza: ");
         String nombre = scanner.next();
