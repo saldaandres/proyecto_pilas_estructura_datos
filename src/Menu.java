@@ -18,6 +18,7 @@ public class Menu {
                     break;
                 case 4:
                     gestor.mostrarPedidoActual();
+                    break;
                 default:
                     System.out.println("Haz salido, gracias por preferirnos.\n");
 

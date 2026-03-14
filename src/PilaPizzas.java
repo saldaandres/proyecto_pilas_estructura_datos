@@ -12,7 +12,6 @@ public class PilaPizzas {
     }
 
     public void push(Pizza pizza) {
-        System.out.println("Pizza agregada ---> " + pizza.toString());
         tamano ++;
         if (tope == null) {
             tope = new Nodo(pizza, null);
@@ -34,6 +33,9 @@ public class PilaPizzas {
     }
 
     public Pizza peek() {
+        if (isEmpty()) {
+            return null;
+        }
         return tope.getPizza();
     }
 }

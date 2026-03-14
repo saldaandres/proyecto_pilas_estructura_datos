@@ -43,20 +43,26 @@ public class GestorPedidos {
         }
         Pizza pizzaCompletada = pedidos.pop();
         completados.push(pizzaCompletada);
-        System.out.println("\nPizza " + pizzaCompletada.toString() + " mandada a la pila de completadas.");
+        System.out.println("\n" + pizzaCompletada.toString() + " mandada a la pila de completadas.");
     }
 
     public void redoPedido() {
         if (completados.isEmpty()) {
-            System.out.println("La pila de pedidos completados se encuentra vacia");
+            System.out.println("\nPila de pedidos completados se encuentra vacia");
             return;
         }
         Pizza pizzaPorRehacer = completados.pop();
         pedidos.push(pizzaPorRehacer);
-        System.out.println("\nPizza " + pizzaPorRehacer.toString() + " mandada a la pila de completadas.");
+        System.out.println("\n" + pizzaPorRehacer.toString() + " mandada de vuelta a la pila de produccion.");
     }
 
-    public  Pizza mostrarPedidoActual() {
-        return pedidos.peek();
+    public void mostrarPedidoActual() {
+        if (pedidos.isEmpty()) {
+            System.out.println("No hay ningun pedido en pila de produccion");
+            return;
+        }
+        System.out.println(pedidos.peek());
+
+
     }
 }
