@@ -17,6 +17,8 @@ public class Pizza {
         return Arrays.toString(ingredientes);
     }
 
+    /*Metodo para imprimir las pizzas en un formato legible
+    * para el usuario*/
     public String toString() {
         return "Pizza " + getNombre() + ": " + getIngredientes();
     }
