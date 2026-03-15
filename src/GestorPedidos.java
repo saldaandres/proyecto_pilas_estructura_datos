@@ -34,26 +34,27 @@ public class GestorPedidos {
         }
         Pizza nuevaPizza = new Pizza(nombre, ingredientes);
         pedidos.push(nuevaPizza);
+        System.out.println(nuevaPizza.toString() + " se anadio con exito");
     }
 
     public void undoPedido() {
         if (pedidos.isEmpty()) {
-            System.out.println("\nPila de pedidos se encuentra vacia");
+            System.out.println("Pila de pedidos se encuentra vacia");
             return;
         }
         Pizza pizzaCompletada = pedidos.pop();
         completados.push(pizzaCompletada);
-        System.out.println("\n" + pizzaCompletada.toString() + " mandada a la pila de completadas.");
+        System.out.println(pizzaCompletada.toString() + " cocinada con exito");
     }
 
     public void redoPedido() {
         if (completados.isEmpty()) {
-            System.out.println("\nPila de pedidos completados se encuentra vacia");
+            System.out.println("Pila de pedidos completados se encuentra vacia.");
             return;
         }
         Pizza pizzaPorRehacer = completados.pop();
         pedidos.push(pizzaPorRehacer);
-        System.out.println("\n" + pizzaPorRehacer.toString() + " mandada de vuelta a la pila de produccion.");
+        System.out.println(pizzaPorRehacer.toString() + " mandada de vuelta a la pila de produccion.");
     }
 
     public void mostrarPedidoActual() {
@@ -62,7 +63,5 @@ public class GestorPedidos {
             return;
         }
         System.out.println(pedidos.peek());
-
-
     }
 }
