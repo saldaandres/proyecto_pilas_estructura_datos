@@ -1,3 +1,6 @@
+- Link github: https://github.com/saldaandres/proyecto_pilas_estructura_datos
+- Video: https://drive.google.com/file/d/1tKIN4POYE2g8FJtnQNkHUc9V6ZOtGv-q/view?usp=drive_link
+
 # Proyecto de Pilas - Curso Estructuras de Datos
 
 El proyecto pretende simular un sistema de gestion de pedidos en una pizzeria y con tal fin se 

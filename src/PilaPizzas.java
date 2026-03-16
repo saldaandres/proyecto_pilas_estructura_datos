@@ -17,7 +17,7 @@ public class PilaPizzas {
     * ingresa en el tope de la pila*/
     public void push(Pizza pizza) {
         tamano ++;
-        if (tope == null) {
+        if (isEmpty()) {
             tope = new Nodo(pizza, null);
             return;
         }

@@ -14,7 +14,7 @@ public class GestorPedidos {
     public int mostrarMenu() {
         System.out.println("\n|---------- Bienvenido al Portal de Pizzas ------------- |");
         System.out.println("|        Digite una de las siguientes opciones           |");
-        System.out.println("|        1. Agregar nueva pizza                         |");
+        System.out.println("|        1. Agregar nueva pizza                          |");
         System.out.println("|        2. Completar pedido                             |");
         System.out.println("|        3. Rehacer pedido                               |");
         System.out.println("|        4. Mostrar pedido actual                        |");
